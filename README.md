@@ -49,7 +49,7 @@ In this article, we are going to install Angular-CLI and it's prerequisites and 
 
 ---
 
-###Prerequisites
+### Prerequisites
 
 Before we can install Angular-CLI we will have to get a few thing set up first. To run Angular-CLI we will need to install these 2 prerequisites first.
 
@@ -59,7 +59,7 @@ Before we can install Angular-CLI we will have to get a few thing set up first. 
 
 ---
 
-###Installing Angular-CLI
+### Installing Angular-CLI
 
 Installing Angular-CLI is as simple as running this simple command:
 
@@ -71,7 +71,7 @@ and the package manager `npm` will do the rest.
 
 ---
 
-###Generating the first `Component`
+### Generating the first `Component`
 
 Now that we have installed all prerequisites it's time to start developing our app. Angular-CLI offers a lot of assistance and allows you to generate basically all Angular 4-Components there are. *(In a smart way!)*
 
@@ -110,7 +110,7 @@ By executing this short command, we just saved ourselves a lot of time creating 
 
 ---
 
-###Generating a Service in a specific folder
+### Generating a Service in a specific folder
 
 Now we have our `component`, but what if we want to share some data between components and need to create a `service` to manage this all. Well, we probably would want the service to be in the correct folder, probably right in the components folder in `/src/app/client`.
 
@@ -134,7 +134,7 @@ export class ClientService {
 
 }
 ```
-###Live-Preview and App-Start
+### Live-Preview and App-Start
 
 Now that we have generated our components, we sure want to see how the result will look like. Luckily Angular-CLI comes pre-configured with a **Live Compile and Reload Server** for which you simply have to run `ng serve` and after a few seconds your site will be live at `http://localhost:4200`.
 
