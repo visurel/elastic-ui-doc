@@ -7,7 +7,7 @@ Support is available through email, ThemeForest comments or chat. If you purchas
 
 ## Table of Contents
 
-   * [elastic ui - Angular 4 Material Design + Redux/ngrx Admin Template](#elastic ui---angular-2-material-design-admin-template)
+   * [elastic ui - Angular 4 Material Design + Redux/ngrx Admin Template](#introduction)
       * [Introduction](#introduction)
       * [Getting Started](#getting-started)
          * [Folder Structure](#folder-structure)
@@ -50,6 +50,7 @@ In this article, we are going to install Angular-CLI and it's prerequisites and 
 ---
 
 ###Prerequisites
+
 Before we can install Angular-CLI we will have to get a few thing set up first. To run Angular-CLI we will need to install these 2 prerequisites first.
 
 * **NodeJS** v4 or newer (we recommend v6 or newer)
@@ -59,6 +60,7 @@ Before we can install Angular-CLI we will have to get a few thing set up first. 
 ---
 
 ###Installing Angular-CLI
+
 Installing Angular-CLI is as simple as running this simple command:
 
 `npm install -g @angular/cli`
@@ -70,6 +72,7 @@ and the package manager `npm` will do the rest.
 ---
 
 ###Generating the first `Component`
+
 Now that we have installed all prerequisites it's time to start developing our app. Angular-CLI offers a lot of assistance and allows you to generate basically all Angular 4-Components there are. *(In a smart way!)*
 
 To generate our first `component` we simply open up a terminal and navigate in our Angular 4-App. Now we simply run `ng g component client` and we get a new component in `/src/app/client` with the following files:
@@ -108,6 +111,7 @@ By executing this short command, we just saved ourselves a lot of time creating 
 ---
 
 ###Generating a Service in a specific folder
+
 Now we have our `component`, but what if we want to share some data between components and need to create a `service` to manage this all. Well, we probably would want the service to be in the correct folder, probably right in the components folder in `/src/app/client`.
 
 Either way, with Angular-CLI we can generate in any folder, wherever we want. Simply use the path *(relative to `/src/app/`)* and use it as the name of the generated component.
