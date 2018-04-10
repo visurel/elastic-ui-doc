@@ -39,7 +39,11 @@ Then in layout.component.ts create a ViewChild
 When resizing for mobile, simply check is the sidenav is already open or closed, then toggle if necessary.
 Following code is located in the MediaReplayService code that checks for MediaChange, in layout.component.ts
 
-if(isMobile || this.layout === 'gamma'){
+if(this.layout === "gamma" && isMobile){
+  this.closeSidenav();
+  //OTHER CODE
+ }
+else if(isMobile){
   if(this.sideNavContainer.opened){this.toggleSideNav()}
   //OTHER CODE
 }else{
