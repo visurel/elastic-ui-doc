@@ -1,0 +1,53 @@
+In Layout.component.ts
+
+create 3 boolean variables for each toggling state
+
+togglingSideNav:boolean;
+togglingQuickPanel:boolean;
+togglingSettings:boolean;
+
+in the toggle functions, create an if statement to check if they are currently being toggled, and if not allow for the dispatch to occur
+along with setting the toggling variable to true. This prevents multiple toggles from occuring before one has completed but still reacts just
+as fast.
+
+example:
+toggleSideNav(){
+  if(!this.togglingSideNav){
+    this.togglingSideNav = true;
+    this.store.dispatch(new layout.ToggleSidenavAction());
+  }
+}
+
+
+
+
+The above is for toggling specifically. When resizing you may run into the same bug, as it skips toggling and directly opens/closes without
+respect to it finishing its closing or opening. The fix is below:
+
+Create a connection to the MatSideNav that contains the side-nav.
+In layout.component.html
+<mat-sidenav class="sidenav-container etc etc etc> 
+
+include the #sidenav in order to reference it in layout.component.ts
+so that it looks like
+<mat-sidenav #sidenav class="sidenav-container etc etc etc> 
+
+Then in layout.component.ts create a ViewChild
+
+@ViewChild('sidenav') sideNavContainer: MatSidenav;
+
+When resizing for mobile, simply check is the sidenav is already open or closed, then toggle if necessary.
+Following code is located in the MediaReplayService code that checks for MediaChange, in layout.component.ts
+
+if(this.layout === "gamma" || isMobile || this.layout === "beta" || this.layout === "alpha"){
+        this.closeSidenav();
+        this.setSidenavMode('over');
+        this.setSidenavDisableClose(false);
+      }
+      else {
+        if(!this.sideNavContainer.opened){this.toggleSidenav()}
+        this.setSidenavMode('side');
+        this.setSidenavDisableClose(true);
+      }
+
+
